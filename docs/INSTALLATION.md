@@ -239,6 +239,8 @@ Logistic Regression
 
 ## Notes
 
+> **Sample-rate note:** The training data used during development were recorded with the OpenBCI Cyton at **250 Hz**. The supplied processing workflow should therefore use a `baseline_config.json` generated from 250 Hz data. If adapting the pipeline to recordings from the custom ADS1198/ESP32-S3 wearable, which operates at **1000 Hz**, generate a new `baseline_config.json` using the 1000 Hz recordings.
+
 The current software remains a research-development pipeline.
 
 Event-detection thresholds are still being tuned, and final classification performance should be evaluated using completely unseen recordings before reporting test accuracy.
