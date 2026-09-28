@@ -1,69 +1,23 @@
-# Early-Detection-of-Wrist-Movement-Intention-Using-Wearable-Forearm-sEMG
+# Early Detection of Wrist Movement Intention Using Forearm sEMG
 
-Python signal-processing and classification tools developed during an Undergraduate Research Opportunity at Imperial College London.
+Software and wearable-electronics development from an Undergraduate Research Opportunity at Imperial College London, investigating whether forearm surface electromyography (sEMG) can be used to detect voluntary wrist and hand movement intention before substantial mechanical movement occurs.
 
 **Author:** Muhammad Abubakar  
 **Supervisor:** Prof. Kristel Fobelets  
-**Project:** *Early Detection of Wrist Movement Intention Using Wearable Forearm sEMG*
+**Institution:** Imperial College London  
+**Project:** Undergraduate Research Opportunity (UROP), 2026
 
-## Overview
+## Project Overview
 
-This project investigates whether surface electromyography (sEMG) recorded from the forearm can be used to detect **voluntary wrist/hand movement intention before substantial mechanical movement occurs**.
+This project builds on the wearable sEMG platform developed by **Abby Finka** during her final-year MEng project at Imperial College London:
 
-The work builds on the wearable sEMG platform developed by **Abby Finka** as part of her Imperial College London final-year project:
+**[Development of a Flexible EMG Readout Board for Wearable Hand Movement Prediction](https://github.com/abbyfinka/FYP-Knitted-EMG)**
 
-> **Development of a Flexible EMG Readout Board for Wearable Hand Movement Prediction**
+Finka's project developed an eight-channel wearable sEMG acquisition system based on the **ADS1198 analogue front end** and **ESP32-S3 microcontroller**, with Bluetooth Low Energy transmission and a Python interface for visualising and recording EMG data.
 
-Her original repository, including the ADS1198/ESP32-S3 acquisition hardware, firmware, BLE interface and Python visualisation software, can be found here:
+My follow-on project focused on two main areas:
 
-**Original hardware/software platform:**  
-https://github.com/abbyfinka/FYP-Knitted-EMG
+- **Wearable hardware redesign:** miniaturising and modularising the existing electronics to improve integration with the knitted forearm armband.
+- **Movement-intention detection:** investigating the early transient period of the EMG signal to detect muscle activation before substantial mechanical movement, rather than focusing only on classification of the final hand or wrist position.
 
-This repository contains the software developed during my follow-on project, focusing specifically on:
-
-- EMG baseline calibration
-- Channel-specific movement-onset detection
-- Early transient extraction
-- Time-domain feature extraction
-- Initial hand-gesture classification
-
-The aim is not simply to classify the final hand position, but to identify useful muscle activity **as early as possible after activation begins**.
-
----
-
-## Background
-
-The original wearable system uses an **ADS1198 analogue front end** and **ESP32-S3 microcontroller** to acquire eight differential sEMG channels from a knitted forearm armband.
-
-The previous project focused primarily on classification once a hand/wrist movement had developed.
-
-My project instead investigated the **transient period immediately after muscle activation**, with the longer-term goal of enabling assistive devices to distinguish intended voluntary movement from involuntary motion such as tremor.
-
-During algorithm development, recordings from an **OpenBCI Cyton** board were also used as a controlled and repeatable EMG source while the custom wearable hardware was being debugged.
-
----
-
-## Processing Pipeline
-
-The software was developed as a staged pipeline:
-
-```text
-Resting EMG
-    |
-    v
-Baseline calibration
-    |
-    v
-Channel-specific activation thresholds
-    |
-    v
-EMG onset detection
-    |
-    v
-Transient window extraction
-    |
-    v
-Feature extraction
-    |
-    v
-Gesture classifier
+The longer-term motivation is the development of assistive wearable systems capable of identifying intended voluntary movement early enough to distinguish it from involuntary motion such as tremor.
