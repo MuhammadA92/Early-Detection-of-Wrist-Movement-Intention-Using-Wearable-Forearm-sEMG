@@ -371,7 +371,7 @@ def main():
 
     plt.xlabel("Time (s)")
     plt.ylabel("Moving |EMG| integral")
-    plt.title("Stored thresholds")
+    plt.title("Reference calibration thresholds")
     plt.legend()
     plt.tight_layout()
     plt.show()
