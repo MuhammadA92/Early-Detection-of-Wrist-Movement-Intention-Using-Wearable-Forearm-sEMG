@@ -91,6 +91,9 @@ EXG Channel 0
 EXG Channel 1
 EXG Channel 2
 EXG Channel 3
+```
+
+---
 
 ## 5. Generate `baseline_config.json`
 
@@ -100,7 +103,6 @@ Run:
 python calibrate_baseline.py
 ```
 
----
 
 and select a resting EMG recording when prompted.
 
