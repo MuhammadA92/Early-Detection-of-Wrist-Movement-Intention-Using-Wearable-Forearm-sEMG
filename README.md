@@ -253,7 +253,7 @@ The main completed software stages are:
 - persistence and re-arm logic;
 - transient-window extraction;
 - time-domain feature extraction;
-- initial five-gesture classification.
+- initial five-gesture classification (the classifier has not yet been deployed to the ESP32-S3 or integrated into the wearable for real-time inference.).
 
 The custom wearable electronics were also manufactured and assembled successfully, but recordings from the wearable showed significant mains-frequency interference and channel-dependent noise.
 
@@ -265,6 +265,7 @@ Software development therefore continued primarily using the more controlled Cyt
 
 Potential next steps include:
 
+- implementing real-time onset detection and classification directly on the ESP32-S3;
 - validating the gesture classifier using fully unseen recordings;
 - reducing the transient classification window from 300 ms towards 150 ms or below;
 - collecting larger and more controlled gesture datasets;
