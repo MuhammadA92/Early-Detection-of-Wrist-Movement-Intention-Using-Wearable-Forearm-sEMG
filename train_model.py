@@ -16,7 +16,7 @@ from sklearn.preprocessing import StandardScaler
 
 # Project files
 
-PROJECT_DIR = Path(r"C:\Users\abuba\UROP_Y2\EMG_with_ECG_electrodes\FYP-Knitted-EMG\App")
+PROJECT_DIR = Path(__file__).resolve().parent
 
 RECORDINGS_DIR = PROJECT_DIR / "recordings"
 CONFIG_FILE = PROJECT_DIR / "baseline_config.json"
@@ -58,6 +58,9 @@ DEFAULT_TRIGGER_K = 4.0
 DEFAULT_REARM_K = 2.0
 
 # Trigger threshold = mean + K * standard deviation
+# Experimental per-channel threshold multipliers.
+# These values were tuned for the development recordings and are not
+# intended to be universal physiological thresholds.
 TRIGGER_K_BY_CHANNEL = {
     "CH1": 4.0,
     "CH2": 4.0,
