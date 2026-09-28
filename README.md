@@ -293,15 +293,11 @@ This repository focuses on the subsequent hardware miniaturisation and the devel
 
 ---
 
-## Project Report
+## Project Report & Disclaimer
 
 The full official UROP project report is not hosted publicly in this repository.
 
 For access to the report or further information about the project, please contact the author using the contact details available on this GitHub profile.
-
----
-
-## Disclaimer
 
 This project was developed as an undergraduate research prototype.
 
