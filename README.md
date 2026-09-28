@@ -38,6 +38,20 @@ The longer-term motivation is the development of assistive wearable systems capa
 
 ---
 
+## Installation
+
+This project extends the wearable sEMG platform developed by **Abby Finka**.
+
+For the original ADS1198/ESP32-S3 hardware, firmware and BLE setup, first follow the instructions in:
+
+**[Abby Finka — FYP-Knitted-EMG](https://github.com/abbyfinka/FYP-Knitted-EMG)**
+
+The Python files in this repository can then be added to the original project's `App/` directory.
+
+For the complete setup and software workflow, see:
+
+**[Installation and Setup](docs/INSTALLATION.md)**
+
 ## Processing Pipeline
 
 The software was developed as a staged pipeline so that baseline calibration, onset detection and classification could be tested independently.
