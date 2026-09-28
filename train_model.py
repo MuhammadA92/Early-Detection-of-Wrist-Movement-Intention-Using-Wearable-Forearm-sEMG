@@ -1,3 +1,11 @@
+"""
+Current gesture-training pipeline.
+
+Trigger and re-arm thresholds are recalculated from the 3-10 s resting
+period of each training recording rather than using the fixed thresholds
+stored in baseline_config.json.
+"""
+
 from pathlib import Path
 import csv
 import json
